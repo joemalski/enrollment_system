@@ -1,5 +1,5 @@
 # Enrollment System
-A Basic Enrollment System Built with the Flask Framework.
+A basic Enrollment System built with the Flask Framework.
 
 # Front-End Stack:
 HTML5, CSS3, JavaScript (ES5), jQuery, Bootstrap 4 and Jinja2 Templates
