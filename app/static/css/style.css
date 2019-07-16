@@ -1,4 +1,6 @@
 /* style.css - app's main css file */
-.red {
-    color: red;
+header, footer {
+    height: 50px;
+    padding-top: 15px;
+    text-align: center;
 }
