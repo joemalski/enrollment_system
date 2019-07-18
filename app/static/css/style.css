@@ -4,3 +4,12 @@ header, footer {
     padding-top: 15px;
     text-align: center;
 }
+
+.login-container {
+    border-radius: 10px;
+    border: 2px solid #343a40;
+    padding: 10px;
+    background-color: lightgray;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}

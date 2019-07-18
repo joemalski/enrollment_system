@@ -2,5 +2,9 @@
 
 $(function () {
   console.log('hello world! - jquery');
+
   $('[data-toggle="popover"]').popover();
+
+
+  
 });

@@ -2,9 +2,28 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1 style="text-align: center;">This is the index page!</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6 login-container">
+            <h3 class="text-center">Enrollment System Login</h3>
+            <form action="" method="post" class="main-form needs-validation">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="form-control" required />
+                    <small class="form-text text-muted">Enter your username.</small>   
+                    <span class="invalid-feedback">Username is empty.</span>
+                    <span class="valid-feedback">Looks Good!</span>  
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" required />
+                    <small class="form-text text-muted">Enter your password.</small>   
+                    <span class="invalid-feedback">Password is empty.</span>
+                    <span class="valid-feedback">Looks Good!</span>  
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
