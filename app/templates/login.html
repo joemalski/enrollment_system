@@ -8,21 +8,46 @@
             <div class="text-center">
                 <img src="{{ url_for('static', filename='images/school-logo.png')}}" alt="school-logo" height="90" width="90">
             </div>
-                <form action="" method="post" class="main-form needs-validation" novalidate>
+                <form action="" method="post" class="main-form" novalidate>
                 {{ form.hidden_tag() }}
                 <div class="form-group">
                     {{ form.username.label }}
-                    {{ form.username(id=False, class='form-control') }}
-                    <small class="form-text text-muted">Enter your username.</small>   
-                    <span class="invalid-feedback">Username is empty.</span>
-                    <span class="valid-feedback">Looks Good!</span>  
+                    {% if form.username.errors %}
+                        {{ form.username(id=False, class='form-control is-invalid') }}
+                        <small class="form-text text-muted">Enter your username.</small>
+                        {% for error in form.username.errors %}
+                        <span class="invalid-feedback">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {% if form.username.data %}
+                            {{ form.username(id=False, class='form-control is-valid') }}
+                            <small class="form-text text-muted">Enter your username.</small>
+                            <span class="valid-feedback">Looks Good!</span>
+                        {% else %}
+                            {{ form.username(id=False, class='form-control') }}
+                            <small class="form-text text-muted">Enter your username.</small>  
+                        {% endif %}
+                    {% endif %}
                 </div>
+
                 <div class="form-group">
                     {{ form.password.label }}
-                    {{ form.password(id=False, class='form-control') }}
-                    <small class="form-text text-muted">Enter your password.</small>   
-                    <span class="invalid-feedback">Password is empty.</span>
-                    <span class="valid-feedback">Looks Good!</span>  
+                    {% if form.password.errors %}
+                        {{ form.password(id=False, class='form-control is-invalid') }}
+                        <small class="form-text text-muted">Enter your password.</small>
+                        {% for error in form.password.errors %}
+                        <span class="invalid-feedback">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {% if form.password.data %}
+                            {{ form.password(id=False, class='form-control is-valid') }}
+                            <small class="form-text text-muted">Enter your password.</small>
+                            <span class="valid-feedback">Looks Good!</span>
+                        {% else %}
+                            {{ form.password(id=False, class='form-control') }}
+                            <small class="form-text text-muted">Enter your password.</small>
+                        {% endif %}
+                    {% endif %}
                 </div>
                 <div class="form-group text-center">
                     {{ form.submit(id=False, class='form-control btn btn-primary') }}
