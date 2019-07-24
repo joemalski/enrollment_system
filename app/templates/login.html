@@ -49,6 +49,14 @@
                         {% endif %}
                     {% endif %}
                 </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        {{ form.remember_me(id='False', class='form-check-input') }}
+                        {{ form.remember_me.label }}
+                    </div>
+                </div>
+
                 <div class="form-group text-center">
                     {% if form.validate() %}
                         {{ form.submit(id=False, class='form-control btn btn-primary is-valid') }}
