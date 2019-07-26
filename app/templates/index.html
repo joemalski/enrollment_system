@@ -2,4 +2,16 @@
 
 {% block content %}
 <h5 class="text-center">After the user successfully logs in this will be rendered... (index page)</h5>
+<div>
+    <a href="{{ url_for('index') }}">Home</a>
+    {% if current_user.is_anonymous %}
+    <a href="{{ url_for('login') }}">Login</a>
+    {% else %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+    {% endif %}
+</div>
+<br>
+<div>
+    <h1>Hi, {{ current_user.username }}</h1>
+</div>
 {% endblock %}

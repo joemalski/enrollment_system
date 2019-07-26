@@ -8,6 +8,17 @@
             <div class="text-center">
                 <img src="{{ url_for('static', filename='images/school-logo.png')}}" alt="school-logo" height="90" width="90">
             </div>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div class="text-center">
+                        <ul class="list-unstyled">
+                            {% for message in messages %}
+                            <li class="text-danger">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                {% endwith %}
                 <form action="" method="post" class="main-form" novalidate>
                 {{ form.hidden_tag() }}
                 <div class="form-group">
