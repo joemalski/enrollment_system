@@ -1,0 +1,31 @@
+{% extends 'main_base.html' %}
+
+{% block content %}
+
+<div class="container-fluid pl-0 pr-0">
+    <div class="row">
+        <div class="col-12">
+            <header class="text-light bg-dark">
+                <h5 class="text-center">Your School Enrollment System</h3>
+            </header>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid container-padding">
+    <div class="row">
+        <h3>Error 404, Page not found!</h3>
+    </div>
+    <div class="row">
+        <a href="{{ url_for('index') }}" class="navbar-brand">Back to Home Page</a>
+    </div>
+</div>
+
+<div class="container-fluid pl-0 pr-0">
+    <div class="row">
+        <div class="col-12">
+            <footer class="text-light bg-dark text-center">&copy; 2020 Your School. All Rights Reserved.</footer>  
+        </div>
+    </div>
+</div>
+{% endblock %}
