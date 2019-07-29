@@ -11,3 +11,7 @@ header, footer {
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+.container-padding {
+    padding: 25px;
+}

@@ -12,23 +12,9 @@
     <title>Enrollment System</title>
 </head>
 <body>
-    <div class="container-fluid pl-0 pr-0">
-        <div class="row">
-            <div class="col-12">
-                <header class="text-light bg-dark">
-                    <h5 class="text-center">School of Python Enrollment System</h3>
-                </header>
-            </div>
-        </div>
-    </div>
+
     {% block content %} {% endblock %}
-    <div class="container-fluid pl-0 pr-0">
-        <div class="row">
-            <div class="col-12">
-                <footer class="text-light bg-dark text-center">&copy; 2020 School of Python. All Rights Reserved.</footer>  
-            </div>
-        </div>
-    </div>
+
     <script src="{{ url_for('static', filename='libs/jquery/jquery-3.3.1.slim.min.js') }}"></script>
     <script src="{{ url_for('static', filename='libs/bootstrap-4.3.1/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

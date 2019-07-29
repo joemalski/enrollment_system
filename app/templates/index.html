@@ -1,17 +1,40 @@
-{% extends "main_base.html" %}
+{% extends 'main_base.html' %}
 
 {% block content %}
-<h5 class="text-center">After the user successfully logs in this will be rendered... (index page)</h5>
-<div>
-    <a href="{{ url_for('index') }}">Home</a>
-    {% if current_user.is_anonymous %}
-    <a href="{{ url_for('login') }}">Login</a>
-    {% else %}
-    <a href="{{ url_for('logout') }}">Logout</a>
-    {% endif %}
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a href="{{ url_for('index') }}" class="navbar-brand">Your School</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                {% if current_user.is_anonymous %}
+                <a href="{{ url_for('login') }}">Login</a>
+                {% else %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid container-padding">
+    <div class="row">
+        <div>Hi, {{ current_user.username }}</div>
+    </div>
+    <br>
+    <div class="row">
+        Contents Here Later...
+    </div>
 </div>
-<br>
-<div>
-    <h1>Hi, {{ current_user.username }}</h1>
+
+<div class="container-fluid pl-0 pr-0">
+    <div class="row">
+        <div class="col-12">
+            <footer class="text-light bg-dark text-center">&copy; 2020 Your School. All Rights Reserved.</footer>  
+        </div>
+    </div>
 </div>
 {% endblock %}
