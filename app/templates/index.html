@@ -9,6 +9,9 @@
     </button>
     <div id="navbarMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item logged-user">
+                <span>Hi, {{ current_user.username }}</span>
+            </li>
             <li class="nav-item">
                 {% if current_user.is_anonymous %}
                 <a href="{{ url_for('login') }}">Login</a>
@@ -20,13 +23,9 @@
     </div>
 </nav>
 
-<div class="container-fluid container-padding">
-    <div class="row">
-        <div>Hi, {{ current_user.username }}</div>
-    </div>
-    <br>
-    <div class="row">
-        Contents Here Later...
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div>set your contents here...</div>
     </div>
 </div>
 
